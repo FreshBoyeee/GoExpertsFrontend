@@ -34,8 +34,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'ls'
-                // sh 'aws s3 sync ./build s3://angfubucket'
+                sh 'aws s3 sync ./build s3://angfubucket'
                 echo 'Deploying....now'
             }
         }
