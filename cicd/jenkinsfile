@@ -1,17 +1,15 @@
 pipeline {
     agent any
 
-    // tools {
-    //     // Use the NodeJS installation defined in Jenkins Global Tool Configuration
-    //     nodejs 'node_12.0.0'
-    // }
+    tools {
+        // Use the NodeJS installation defined in Jenkins Global Tool Configuration
+        nodejs 'node_12.0.0'
+    }
 
     environment {
         // Replace 'your-aws-credentials-id' with the ID you've assigned to the AWS credentials in Jenkins
         AWS_CREDENTIALS = credentials('goExpertUser')
     }
-
-    
 
     stages {
 
@@ -22,8 +20,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                // sh 'npm install'
-                // sh 'npm run build'
+                sh 'npm install'
+                sh 'npm run build'
                 echo 'Building..right now'
             }
         }
