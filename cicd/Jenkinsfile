@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'sudo apt update'
-                sh 'sudo apt install nodejs npm -y'
-
+                sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
+                sh 'nvm install v12'
+                sh 'nvm use v12'
                 sh 'npm -v'
                 sh 'node -v'
                 sh 'npm install'
