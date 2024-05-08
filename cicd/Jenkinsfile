@@ -5,10 +5,6 @@ pipeline {
             steps {
                 // sh 'npm install'
                 // sh 'npm run build'
-                sh 'sudo apt install curl unzip -y'
-                sh 'curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"'
-                sh 'unzip awscliv2.zip'
-                sh 'sudo ./aws/install'
                 sh 'aws --version'
             }
         }
