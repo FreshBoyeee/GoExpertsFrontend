@@ -5,8 +5,9 @@ pipeline {
             steps {
                 // sh 'npm install' 
                 // sh 'npm run build'\
-                sh 'npm install --verbose'
-                echo "now building..."
+                // sh 'npm install --verbose'
+                sh 'npm -v'
+                echo "building..."
             }
         }
     }
