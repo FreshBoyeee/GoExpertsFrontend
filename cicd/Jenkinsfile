@@ -6,7 +6,7 @@ pipeline {
                 sh 'npm install'
                 sh 'npm run build'
                 sh 'ls'
-                sh 'cd build'
+                sh 'cd /var/jenkins/workspace/goExpert/build'
                 sh 'pwd'
                 sh 'ls'
             }
